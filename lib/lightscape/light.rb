@@ -1,6 +1,3 @@
-require 'rest_client'
-require 'json'
-
 module Lightscape
   class Light
     def self.find number

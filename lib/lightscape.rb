@@ -2,6 +2,9 @@ require "lightscape/version"
 require "lightscape/light"
 
 module Lightscape
+  require 'rest_client'
+  require 'json'
+
   module Client
     extend self
     attr_writer :bridge, :user
@@ -18,10 +21,6 @@ module Lightscape
       @user ||= ENV.fetch("HUE_USER", "rubyclient")
     end
   end
-
-  # Red: 0.675, 0.322
-  # Green: 0.4091, 0.518
-  # Blue: 0.167, 0.04
 
   COLORS = {
       red: [0.675, 0.322],
